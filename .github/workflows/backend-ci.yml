@@ -88,3 +88,5 @@ jobs:
           RAZORPAY_KEY_SECRET: test-secret
           RAZORPAY_WEBHOOK_SECRET: test-webhook-secret
         run: ./mvnw clean package -DskipTests
+              - name: Build Docker image
+        run: docker build -t e-auction-backend ./backend
